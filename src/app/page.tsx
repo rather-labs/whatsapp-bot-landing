@@ -498,7 +498,7 @@ export default function Home() {
                   Complete Walkthrough
                 </h3>
                 <p className="text-gray-300">
-                  From registration to your first USDC payment in under 2 minutes
+                  From registration to your first USDC payment in under 3 minutes
                 </p>
               </div>
             </div>
