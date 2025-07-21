@@ -3,21 +3,16 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { 
-  Smartphone, 
   Shield, 
   Coins, 
   TrendingUp, 
-  Users, 
   Zap, 
   Lock, 
   ArrowRight,
   CheckCircle,
   DollarSign,
-  Send,
-  Vault,
   MessageCircle,
   QrCode,
-  Star,
   Timer,
   Globe
 } from 'lucide-react'
@@ -301,6 +296,7 @@ export default function Home() {
                              <div className="space-y-4">
                  {[
                    "Coinbase smart wallet with on-device passkey (biometric) authentication",
+                   "You hold ownership of your assets",
                    "Whatsapp business API credentials",
                    "PIN authentication for session management",
                    "Blockchain-secured transactions",
@@ -352,107 +348,6 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Demo Section */}
-      <section id="demo-section" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              See It In Action
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Watch how easy it is to manage your crypto assets through WhatsApp with Chat-ching
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/20 shadow-2xl">
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-900">
-                {/* Video Player */}
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your actual video URL
-                  title="Chat-ching Demo Video - WhatsApp Crypto Bot Walkthrough"
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-                
-                {/* Fallback for when video is not available */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-green-500/20 to-green-700/20 backdrop-blur-sm">
-                  <div className="text-center">
-                    <div className="bg-green-500/20 rounded-full p-8 mb-4 mx-auto w-fit">
-                      <svg 
-                        className="w-16 h-16 text-green-400" 
-                        fill="currentColor" 
-                        viewBox="0 0 24 24"
-                        role="img"
-                        aria-label="Play video icon"
-                      >
-                        <title>Play Button</title>
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white mb-2">Demo Video</h3>
-                    <p className="text-gray-300">Watch Chat-ching in action</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Video Description */}
-              <div className="mt-6 text-center">
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  Complete Walkthrough
-                </h3>
-                <p className="text-gray-300">
-                  From registration to your first USDC payment in under 2 minutes
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Demo Features Grid */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid md:grid-cols-3 gap-6 mt-12"
-          >
-            <div className="text-center">
-              <div className="bg-green-500/10 rounded-lg p-4 mb-4">
-                <MessageCircle className="w-8 h-8 text-green-400 mx-auto" />
-              </div>
-              <h4 className="text-lg font-semibold text-white mb-2">WhatsApp Integration</h4>
-              <p className="text-gray-300 text-sm">See how seamlessly crypto works within WhatsApp</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-green-500/10 rounded-lg p-4 mb-4">
-                <Zap className="w-8 h-8 text-green-400 mx-auto" />
-              </div>
-              <h4 className="text-lg font-semibold text-white mb-2">Instant Transactions</h4>
-              <p className="text-gray-300 text-sm">Watch real-time USDC transfers in action</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-green-500/10 rounded-lg p-4 mb-4">
-                <Shield className="w-8 h-8 text-green-400 mx-auto" />
-              </div>
-              <h4 className="text-lg font-semibold text-white mb-2">Security Features</h4>
-              <p className="text-gray-300 text-sm">Whatsapp credentials, PIN authentication and coinbase&apos;s smart wallet with on-device passkey (biometric) authentication </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -557,6 +452,87 @@ export default function Home() {
               <p className="text-gray-300">
                 All settings can be easily configured through simple WhatsApp commands. Change your preferences anytime with commands like <code className="text-green-400 bg-gray-800 px-2 py-1 rounded">/riskprofile</code> and <code className="text-green-400 bg-gray-800 px-2 py-1 rounded">/authprofile</code>
               </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Demo Section */}
+      <section id="demo-section" className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              See It In Action
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Watch how easy it is to manage your crypto assets through WhatsApp with Chat-ching
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/20 shadow-2xl">
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-900">
+                {/* Video Player */}
+                <iframe
+                  src="https://www.youtube.com/embed/SaG8dlto_ak"
+                  title="Chat-ching Demo Video - WhatsApp Crypto Bot Walkthrough"
+                  className="absolute inset-0 w-full h-full rounded-xl"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              
+              {/* Video Description */}
+              <div className="mt-6 text-center">
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Complete Walkthrough
+                </h3>
+                <p className="text-gray-300">
+                  From registration to your first USDC payment in under 2 minutes
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Demo Features Grid */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="grid md:grid-cols-3 gap-6 mt-12"
+          >
+            <div className="text-center">
+              <div className="bg-green-500/10 rounded-lg p-4 mb-4">
+                <MessageCircle className="w-8 h-8 text-green-400 mx-auto" />
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-2">WhatsApp Integration</h4>
+              <p className="text-gray-300 text-sm">See how seamlessly crypto works within WhatsApp</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-green-500/10 rounded-lg p-4 mb-4">
+                <Zap className="w-8 h-8 text-green-400 mx-auto" />
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-2">Instant Transactions</h4>
+              <p className="text-gray-300 text-sm">Watch real-time USDC transfers in action</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-green-500/10 rounded-lg p-4 mb-4">
+                <Shield className="w-8 h-8 text-green-400 mx-auto" />
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-2">Security Features</h4>
+              <p className="text-gray-300 text-sm">Whatsapp credentials, PIN authentication and coinbase&apos;s smart wallet with on-device passkey (biometric) authentication </p>
             </div>
           </motion.div>
         </div>
