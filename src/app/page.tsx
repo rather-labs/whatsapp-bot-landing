@@ -539,7 +539,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="get-started-section" className="py-24 bg-gradient-to-r from-green-500/20 to-green-700/20 backdrop-blur-sm">
+      <section id="get-started-section" className="py-24">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -550,19 +550,20 @@ export default function Home() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Enjoy the seamless crypto experience through WhatsApp with Chat-ching
+              <b>Soon</b> you will be able to enjoy the <br />seamless crypto experience through WhatsApp with Chat-ching.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <motion.button 
                 whileTap={{ scale: 0.95 }}
+                disabled={true}
                 className="bg-gradient-to-r from-green-500 to-green-600 text-black px-12 py-4 rounded-xl font-semibold text-xl shadow-2xl hover:shadow-3xl transition-all"
               >
-                Connect WhatsApp Now <ArrowRight className="inline w-5 h-5 ml-2" />
+                Connect WhatsApp <ArrowRight className="inline w-5 h-5 ml-2" />
               </motion.button>
               <div>
                 <Image
-                  src="/whatsapp_qr.png"
+                  src="/whatsapp_qr_placeholder.png"
                   alt="WhatsApp QR Code"
                   width={200}
                   height={200}
@@ -572,6 +573,36 @@ export default function Home() {
               </div>
             </div>
             
+          </motion.div>
+        </div>
+      </section>
+
+
+      {/* Made by Rather Labs Section */}
+      <section className="py-16 bg-black/5 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            
+            <p className="text-gray-400 text-lg mb-4">Made by</p>
+            <a 
+              href="https://ratherlabs.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-4 text-green-400 hover:text-green-300 transition-all duration-300 group"
+            >
+              <Image
+                src="/Rather.png"
+                alt="Rather Labs"
+                width={48}
+                height={48}
+                className="w-12 h-12"
+              />
+              <span className="text-3xl font-bold group-hover:underline text-white">Rather Labs</span>
+            </a>
           </motion.div>
         </div>
       </section>
